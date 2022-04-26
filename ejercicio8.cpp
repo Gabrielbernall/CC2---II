@@ -1,16 +1,15 @@
 #include <iostream>
-#include <iostream>
+#include <stdlib.h>
 using namespace std;
 
 int main(){
-    int x,numero,suma=0,media;
-    cout<<"Ditite la cantidad 'x'de numeros: ",cin>>x;
-    for (int i = 0; i < x; i++){
-        cout<<"Numero ["<<i<<"]: ",cin>>numero;
-        suma += numero; 
+    int n;
+    cout<<"Numero?: ",cin>>n;
+
+    for (int i = 1; i <= n; i++){
+        cout<<n*i<<' ';
     }
-    media = suma / x ;
-    cout<<"Media: "<<media;
+    
     cout<<endl;
     system("pause");
     return 0;

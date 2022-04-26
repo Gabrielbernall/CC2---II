@@ -3,19 +3,21 @@
 using namespace std;
 
 int main(){
-    int num1,num2;
-    cout<<"Digite el primer numero entero: ",cin>>num1;
-    cout<<"Digite el segundo numero entero: ",cin>>num2;
+    int n,promedio,nota[3];
+    cout<<"Digite el valor de 'n' para el valor de estudiantes: ",cin>>n;
+    for (int i = 0; i < n; i++){
+        
+        int suma=0;
+        for (int j = 0; j < 3; j++)
+        {
+            cout<<"Digite la nota ["<<j<<"] del estudiante ["<<i<<"]: ",cin>>nota[j];
+            suma = suma + nota[j];
+        }
+        promedio = suma / 3;
+        cout<<"El promedio del estudiante ["<<i<<"] es: "<<promedio<<endl;
+        fflush(stdin);
+    }
 
-    if (num1 % num2 == 0){
-        cout<<"El numero 2 es divisor del numero 1";
-    }else if (num2 % num1 == 0)
-    {
-        cout<<"El numero 1 es divisor del numero 2";
-    }else
-        cout<<"No son divisores entre si";
-    
-    cout<<endl;
     system("pause");
     return 0;
 }
